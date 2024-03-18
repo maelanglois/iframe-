@@ -1,8 +1,8 @@
 const Form = class {
-    constructor() {
-        this.el = document.querySelector('.root');
-        this.run();
-    };
+  constructor() {
+    this.el = document.querySelector('.root');
+    this.run();
+  };
 
     render() {
         return `
@@ -15,9 +15,9 @@ const Form = class {
         </form>`;
     };
 
-    run() {
-        this.el.innerHTML = this.render();
-    };
+  run() {
+    this.el.innerHTML = this.render();
+  };
 };
 
 const myForm = new Form();
