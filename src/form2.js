@@ -7,7 +7,7 @@ const UserForm = class {
   };
 
   onClick(render) {
-    const el3 = document.querySelector('.help');
+    const el3 = document.querySelector('.submit');
     const el2 = document.querySelector('body');
     const el = document.querySelector('.root');
 
@@ -101,4 +101,4 @@ const UserForm = class {
   };
 };
 
-const myForm2 = new Form2();
+const myForm2 = new UserForm();
