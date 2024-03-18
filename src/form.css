@@ -3,6 +3,8 @@
     --mainc2: #148C6C;
     --mainc3: #F2FAF7;
     --bg1: #FDFBF6;
+    --grey1: #a6a6a6;
+    --grey2: #ededed;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -15,7 +17,7 @@ body{
     right: 0;
     bottom: 0;
     font-family: 'Inter', sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     background-color: var(--bg1);
 }
 
@@ -33,7 +35,7 @@ body{
 }
 
 input{
-    border: 1px solid black !important;
+    border: 1px solid var(--grey1) !important;
     outline: none !important;
     border-radius: 5px;
     padding: 10px;
@@ -41,7 +43,7 @@ input{
 
 .submit{
     border-radius: 5px;
-    background-color: var(--mainc1);
+    background-color: var(--mainc2);
     padding: 10px;
     color: white;
     transition: 0.3s;
@@ -51,6 +53,69 @@ input{
 }
 
 .submit:hover{
-    background-color: var(--mainc2);
+    background-color: var(--mainc1);
     transition: 0.3s;
+}
+
+
+/** DONNEES **/
+
+
+.contain{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.datas-title{
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+.datas-sub{
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.datas-disp{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.datas-one{
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px var(--grey1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.datas-two{
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.data-title{
+    font-size: 16px;
+}
+
+.schema-disp{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.schema-data{
+    background-color: var(--grey2);
+    font-family: 14px;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.sc-disp{
+    display: flex;
 }
