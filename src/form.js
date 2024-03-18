@@ -1,21 +1,21 @@
-const Form = class{
+const Form = class {
     constructor() {
-        el = document.querySelector('.root');
-        run();
+        this.el = document.querySelector('.root');
+        this.run();
     };
 
     render() {
-        return`
+        return `
         <form method="post">
             <div class="num-ademe">
                 <input type="text" class="" placeholder="Numéro Ademe" name="num-ademe" class="form">
             </div>
-        </form>`
+        </form>`;
     };
 
     run() {
-        el.innerHTML = render();
+        this.el.innerHTML = this.render();
     };
 };
 
-export default Form;
+const myForm = new Form();
