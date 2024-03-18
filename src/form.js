@@ -2,8 +2,10 @@ const Form = class{
 
     render() {
         return`
-        <form method="post" class="">
-            <input type="text" class="">
+        <form method="post">
+            <div class="num-ademe">
+                <input type="text" class="" placeholder="Numéro Ademe" name="num-ademe">
+            </div>
         </form>`
     }
 
