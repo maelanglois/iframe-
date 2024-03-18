@@ -1,0 +1,10 @@
+:root {
+  --primary: #e9477a;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #212529;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
