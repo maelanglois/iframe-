@@ -1,4 +1,4 @@
-const UserForm = Class {
+const UserForm = class {
   constructor() {
     this.el = document.querySelector('.root');
     this.el2 = document.querySelector('body');
