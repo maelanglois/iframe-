@@ -2,11 +2,10 @@ const UserForm = class {
   constructor() {
     this.el = document.querySelector('.root');
     this.el2 = document.querySelector('body');
-    this.rend = this.render();
     this.run();
   };
 
-  onClick(render) {
+  onClick() {
     const el3 = document.querySelector('.submit');
     const el2 = document.querySelector('body');
     const el = document.querySelector('.root');
@@ -15,23 +14,27 @@ const UserForm = class {
       event.preventDefault()
       var xhr = new XMLHttpRequest(); 
       xhr.open('POST', 'form.js');
+      const num_ademe = document.querySelector('#num_ademe');
+      const rend = this.render(num_ademe)
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
           el2.removeChild(el);
-          el2.innerHTML = render;
+          el2.innerHTML = rend;
         }
       };
       xhr.send();
     });
   }
 
-  render() {
+  render(num_ademe) {
     return `
     <div class="user-form">
       <div class="user-questions">
         <form>
           <div class="user-info">
             <div class="user-line"
+              <input type='hidden' id='num_ademe' value='${num_ademe}'>
+
               <label for="firstname">Prénom</label>
               <input name="firstname" id="firstname" type="text" placeholder="Votre prénom" required>
 
@@ -66,14 +69,13 @@ const UserForm = class {
             </div>
             <div>
               <p>Comptez-vous réaliser des travaux de rénovations prochainement ?</p>
-              <input list="renovation" required>
-              <datalist id="renovation">
-              <option value="Oui, dans moins de 3 mois">
-              <option value="Oui, dans les 6 mois">
-              <option value="Oui, dans plus de 6 mois">
-              <option value="Non">
-              <option value="Je ne sais pas">
-              </datalist>
+              <select id="renovation">
+                <option value="Oui, dans moins de 3 mois">Oui, dans moins de 3 mois</option>
+                <option value="Oui, dans les 6 mois">Oui, dans les 6 mois</option>
+                <option value="Oui, dans plus de 6 mois">Oui, dans plus de 6 mois</option>
+                <option value="Non">Non</option>
+                <option value="Je ne sais pas">Je ne sais pas</option>
+              </select>
             </div>
             <div>
               <p>Avez-vous déjà un artisan ?</p>
@@ -105,7 +107,7 @@ const UserForm = class {
   };
 
   run() {
-    this.onClick(this.rend);
+    this.onClick();
   };
 };
 
