@@ -60,13 +60,13 @@ const UserForm = class {
           <div>
             <p>Comptez-vous réaliser des travaux de rénovations prochainement ?</p>
             <input list="renovation">
-            <datalist id="renovation">
-            <option value="Oui, dans moins de 3 mois">
-            <option value="Oui, dans les 6 mois">
-            <option value="Oui, dans plus de 6 mois">
-            <option value="Non">
-            <option value="Je ne sais pas">
-            </datalist>
+            <select id="renovation">
+            <option value="Oui, dans moins de 3 mois">Oui, dans moins de 3 mois</option>
+            <option value="Oui, dans les 6 mois">Oui, dans les 6 mois</option>
+            <option value="Oui, dans plus de 6 mois">Oui, dans plus de 6 mois</option>
+            <option value="Non">Non</option>
+            <option value="Je ne sais pas">Je ne sais pas</option>
+            </select>
           </div>
           <div>
             <p>Avez-vous déjà un artisan ?</p>
