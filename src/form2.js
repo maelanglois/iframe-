@@ -31,8 +31,8 @@ const UserForm = class {
     <div class="user-form">
       <div class="user-questions">
         <form>
-          <div class="user-info">
-            <div class="user-line"
+          <div class="reg-disp">
+            <div class="reg-inp">
               <input type='hidden' id='num_ademe' value='${num_ademe}'>
               <label for="firstname">Prénom</label>
               <input name="firstname" id="firstname" type="text" placeholder="Votre prénom" required>
