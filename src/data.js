@@ -7,7 +7,7 @@ const Two = class {
     render() {
         return `
             <div class="contain">
-                <div class="datas-title">Le classement de votre logement est : </div>
+                <div class="datas-title">Le classement de votre logement est : G</div>
                 <div class="datas-sub">Une note de G correspond au top 7% des logements français les plus énergivores</div>
                 <div class="datas-disp">
                     <div class="datas-one">
