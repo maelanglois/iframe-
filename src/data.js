@@ -36,8 +36,37 @@ const Two = class {
                 </div>
                 <div class="datas-title">Nous avons concocté 2 scénarios pour améliorer votre DPE</div>
                 <div class="datas-sub">Ces scénarios sont sur-mesure. Grâce à votre DPE, notre logiciel récupère +300 paramètres et relevés techniques de votre bien et conçoit des scénarios de travaux précis, pour votre bien, et pas un autre.</div>
-                <div class="sc-disp">
-
+                <div class="datas-disp">
+                    <div class="datas-three">
+                        <div class="energy-disp">
+                            <div class="energy-rank"><div class="energy g">G</div> > <div class="energy c">C</div></div>
+                        </div>
+                        <div class="energy-sub">Economique</div>
+                        <div class="energy-title">Solution</div>
+                        <div class="energy-price">
+                            <div class="energy-subt">Coût des travaux</div>
+                            <div class="energy-title">14.000</div>
+                            <hr>
+                            <div class="energy-subt">Coût des travaux</div>
+                            <div class="energy-title">14.000</div>
+                        </div>
+                        <div class="energy-join"><div class="material-symbols-outlined energy-icon">call</div> Être accompagné</div>
+                    </div>
+                    <div class="datas-three">
+                        <div class="energy-disp">
+                        <div class="energy-rank"><div class="energy g">G</div> > <div class="energy c">C</div></div>
+                        </div>
+                        <div class="energy-sub">Economique</div>
+                        <div class="energy-title">Solution</div>
+                        <div class="energy-price">
+                            <div class="energy-subt">Coût des travaux</div>
+                            <div class="energy-title">14.000</div>
+                            <hr>
+                            <div class="energy-subt">Coût des travaux</div>
+                            <div class="energy-title">14.000</div>
+                        </div>
+                        <div class="energy-join"><div class="material-symbols-outlined energy-icon">call</div> Être accompagné</div>
+                    </div>
                 </div>
             </div>
         `;

@@ -5,6 +5,13 @@
     --bg1: #FDFBF6;
     --grey1: #a6a6a6;
     --grey2: #ededed;
+    --a: #009B6C;
+    --b: #51B054;
+    --c: #77BF76;
+    --d: #FFCD29;
+    --e: #F0B418;
+    --f: #EC8234;
+    --g: #D71D20;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -118,4 +125,109 @@ input{
 
 .sc-disp{
     display: flex;
+}
+
+.energy-disp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.datas-three{
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px var(--grey1);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.energy-rank{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.energy{
+    background-color: var(--mainc2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.a{
+    background-color: var(--a);
+}
+
+.b{
+    background-color: var(--b);
+}
+
+.c{
+    background-color: var(--c);
+}
+
+.d{
+    background-color: var(--d);
+}
+
+.e{
+    background-color: var(--e);
+}
+
+.f{
+    background-color: var(--f);
+}
+
+.g{
+    background-color: var(--g);
+}
+
+.energy-title{
+    font-size: 26px;
+}
+
+.energy-sub{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.energy-price{
+    background-color: var(--mainc3);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.energy-subt{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.energy-join{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mainc2);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    gap: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.energy-join:hover{
+    background-color: var(--mainc1);
+    transition: 0.3s;
+}
+
+.energy-icon{
+    font-size: 18px !important;
 }
