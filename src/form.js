@@ -1,23 +1,37 @@
 const Form = class {
   constructor() {
     this.el = document.querySelector('.root');
+
     this.run();
   };
 
-    render() {
-        return `
-        <form method="post">
-            <div class="num-ademe">
-                <label for="Numéro Ademe" class="label">Je rentre mon numéro Ademe</label>
-                <input type="text" class="" placeholder="Numéro Ademe" name="num-ademe" id='num_ademe' class="input">
-                <button type='submit' class="submit">Optimiser mon DPE -></button>
-            </div>
-        </form>`;
-    };
+  hiddenForm() {
+    const el = document.querySelector('#submit');
+    const el2 = document.querySelector('#iframe');
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+        document.getElementById("form").hidden = true;
+        document.getElementById("form2").hidden = false;
+      },
+      false,
+    );
+  }
+
+  hiddenForm2() {
+    const el = document.querySelector('#submit2');
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+        document.getElementById("form2").hidden = true;
+        document.getElementById("form3").hidden = false;
+      },
+      false,
+    );
+  }
 
   run() {
-    this.el.innerHTML = this.render();
+    this.hiddenForm();
+    this.hiddenForm2()
   };
 };
 
-const myForm = new Form();
+new Form();
