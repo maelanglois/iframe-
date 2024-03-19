@@ -5,6 +5,13 @@
     --bg1: #FDFBF6;
     --grey1: #a6a6a6;
     --grey2: #ededed;
+    --a: #009B6C;
+    --b: #51B054;
+    --c: #77BF76;
+    --d: #FFCD29;
+    --e: #F0B418;
+    --f: #EC8234;
+    --g: #D71D20;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -49,12 +56,79 @@ input{
     transition: 0.3s;
     border: none !important;
     font-family: "Inter", sans-serif;
-    width: 20%;
+    width: 30%;
 }
 
 .submit:hover{
     background-color: var(--mainc1);
     transition: 0.3s;
+}
+
+form{
+    margin-bottom: 20px;
+}
+
+
+
+/** FORM 2 **/
+
+
+
+.reg-disp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.reg-disp-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.reg-inp{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.reg-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.user-form{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px; 
+}
+
+.user-questions{
+    width: 70%;
+}
+
+.user-line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reg-abo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.reg-select{
+    border: 1px solid var(--grey1) !important;
+    outline: none !important;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 
@@ -118,4 +192,109 @@ input{
 
 .sc-disp{
     display: flex;
+}
+
+.energy-disp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.datas-three{
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px var(--grey1);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.energy-rank{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.energy{
+    background-color: var(--mainc2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.a{
+    background-color: var(--a);
+}
+
+.b{
+    background-color: var(--b);
+}
+
+.c{
+    background-color: var(--c);
+}
+
+.d{
+    background-color: var(--d);
+}
+
+.e{
+    background-color: var(--e);
+}
+
+.f{
+    background-color: var(--f);
+}
+
+.g{
+    background-color: var(--g);
+}
+
+.energy-title{
+    font-size: 26px;
+}
+
+.energy-sub{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.energy-price{
+    background-color: var(--mainc3);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.energy-subt{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.energy-join{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mainc2);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    gap: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.energy-join:hover{
+    background-color: var(--mainc1);
+    transition: 0.3s;
+}
+
+.energy-icon{
+    font-size: 18px !important;
 }
