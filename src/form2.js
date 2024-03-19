@@ -2,11 +2,10 @@ const UserForm = class {
   constructor() {
     this.el = document.querySelector('.root');
     this.el2 = document.querySelector('body');
-    this.rend = this.render();
     this.run();
   };
 
-  onClick(render) {
+  onClick() {
     const el3 = document.querySelector('.submit');
     const el2 = document.querySelector('body');
     const el = document.querySelector('.root');
@@ -15,23 +14,26 @@ const UserForm = class {
       event.preventDefault()
       var xhr = new XMLHttpRequest(); 
       xhr.open('POST', 'form.js');
+      const num_ademe = document.querySelector('#num_ademe');
+      const rend = this.render(num_ademe)
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
           el2.removeChild(el);
-          el2.innerHTML = render;
+          el2.innerHTML = rend;
         }
       };
       xhr.send();
     });
   }
 
-  render() {
+  render(num_ademe) {
     return `
     <div class="user-form">
       <div class="user-questions">
         <form>
-          <div class="reg-disp">
-            <div class="reg-inp">
+          <div class="user-info">
+            <div class="user-line"
+              <input type='hidden' id='num_ademe' value='${num_ademe}'>
               <label for="firstname">Prénom</label>
               <input name="firstname" id="firstname" type="text" placeholder="Votre prénom" required>
             </div>
@@ -124,7 +126,7 @@ const UserForm = class {
   };
 
   run() {
-    this.onClick(this.rend);
+    this.onClick();
   };
 };
 

@@ -9,7 +9,7 @@ const Form = class {
         <form method="post">
             <div class="num-ademe">
                 <label for="Numéro Ademe" class="label">Je rentre mon numéro Ademe</label>
-                <input type="text" class="" placeholder="Numéro Ademe" name="num-ademe" class="input">
+                <input type="text" class="" placeholder="Numéro Ademe" name="num-ademe" id='num_ademe' class="input">
                 <button type='submit' class="submit">Optimiser mon DPE -></button>
             </div>
         </form>`;
