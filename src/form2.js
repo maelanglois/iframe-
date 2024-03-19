@@ -15,7 +15,8 @@ const UserForm = class {
       var xhr = new XMLHttpRequest(); 
       xhr.open('POST', 'form.js');
       const num_ademe = document.querySelector('#num_ademe');
-      const rend = this.render(num_ademe)
+      const rend = this.render(num_ademe);
+      this.calculDpe(num_ademe);
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
           el2.removeChild(el);
@@ -24,6 +25,32 @@ const UserForm = class {
       };
       xhr.send();
     });
+  }
+
+  calculDpe(num_ademe){
+     fetch('https://dpe-api-service-dev-xfyprtzkyq-ew.a.run.app/token', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: 'grant_type=&username=coda_school_student&password=XEUgknQ)GDCf%40K%3A%5D2T6%60c_Y%3Ddb%26%2BM9&scope=&client_id=&client_secret='
+    })
+    .then(response=> console.log(response)); 
+    /* fetch(`https://dpe-api-service-dev-xfyprtzkyq-ew.a.run.app/calcul_dpe/${num_ademe}`, {
+      mode: 'no-cors',
+      method: 'get',
+      headers: {
+        'accept': 'application/json',
+        'Authorization': 'Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjb2RhX3NjaG9vbF9zdHVkZW50IiwiZXhwIjoxNzEwODU0NTg3fQ.KkJiShrBW7x9T5-QDueaPdXlAMVp9erNoPECIG_gv7w'
+      }
+    })
+    .then(response => console.log(response))
+    .catch((error) => {
+      reject(error);
+    }); */
+
   }
 
   render(num_ademe) {
