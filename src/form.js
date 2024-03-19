@@ -7,7 +7,6 @@ const Form = class {
 
   hiddenForm() {
     const el = document.querySelector('#submit');
-    const el2 = document.querySelector('#iframe');
     el.addEventListener("click", function (event) {
       event.preventDefault();
         document.getElementById("form").hidden = true;
