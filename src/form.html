@@ -7,10 +7,118 @@
   <title>Form</title>
 </head>
 <body>
-    <div class="root"></div>
+  <div class="root">
+    <form method="post" id="form">
+      <div class="num-ademe">
+        <label for="Numéro Ademe" class="label">Je rentre mon numéro Ademe</label>
+        <input type="text" class="" placeholder="Numéro Ademe" name="num-ademe" class="input">
+        <button type='submit' id="submit">Optimiser mon DPE -></button>
+      </div>
+    </form>
+    <div id="form2" hidden>
+      <form method="post">
+        <div>
+          <label for="firstname">Prénom</label>
+          <input name="firstname" id="firstname" type="text" placeholder="Votre prénom">
+
+          <label for="lastname">Nom</label>
+          <input name="lastname" id="lastname" type="text" placeholder="Votre nom">
+
+          <label for="phone">N° de téléphone</label>
+          <input name="phone" id="phone" type="tel" placeholder="Votre numéro de téléphone">
+
+          <label for="email">Adresse Mail</label>
+          <input name="email" id="email" type="email" placeholder="Votre adresse email">
+
+          <label for="address">Adresse de votre bien</label>
+          <input name="address" id="address" type="text" placeholder="Votre adresse email">
+        </div>
+        <div>
+          <div>
+            <p>Je suis...</p>
+            <input type="radio" id="landlord_in" name="user_type" value="landlord_in">
+            <label for="landlord_in">Propriétaire occupant</label>
+            <input type="radio" id="landlord_out" name="user_type" value="landlord_out">
+            <label for="landlord_out">Propriétaire bailleur</label>
+            <input type="radio" id="landlord_futur" name="user_type" value="landlord_futur">
+            <label for="landlord_futur">Futur Propriétaire</label>
+            <input type="radio" id="tenant" name="user_type" value="tenant">
+            <label for="tenant">Locataire</label>
+          </div>
+          <div>
+            <p>Comptez-vous réaliser des travaux de rénovations prochainement ?</p>
+            <input list="renovation">
+            <datalist id="renovation">
+            <option value="Oui, dans moins de 3 mois">
+            <option value="Oui, dans les 6 mois">
+            <option value="Oui, dans plus de 6 mois">
+            <option value="Non">
+            <option value="Je ne sais pas">
+            </datalist>
+          </div>
+          <div>
+            <p>Avez-vous déjà un artisan ?</p>
+            <input type="radio" id="craftsman_yes" name="craftsman" value="craftsman_yes">
+            <label for="craftsman_yes">Oui</label>
+            <input type="radio" id="craftmans_no" name="craftsman" value="craftmans_no">
+            <label for="craftsman_no">Non</label>
+          </div>
+          <div>
+            <input type="checkbox" id="" name="" value="">
+            <label for="">J'accepte d'être recontacté par un artisan partenaire pour un devis estimatif</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2">Je m'abonne à la newsletter Optimo</label><br>
+          </div>
+        </div>
+        <button type='submit' id="submit2">Obtenir mes scénari de travaux -></button>
+      </form> 
+      <div>
+        <div>
+          Google Maps
+        </div>
+        <div>
+          Legals and guaranties
+        </div>
+      </div>
+    </div>
+    <div class="contain" id="form3" hidden>
+    <div class="datas-title">Le classement de votre logement est : </div>
+    <div class="datas-sub">Une note de G correspond au top 7% des logements français les plus énergivores</div>
+    <div class="datas-disp">
+        <div class="datas-one">
+            <div class="data-title">Votre étiquette énergie -</div>
+            <div class="schema-disp">
+                <div class="schema-data">309 kWh/m²/an</div>
+                <div class="schema-data">114 kg CO2/m²/an</div>
+            </div>
+            Votre logement est classé G. En tant que passoire thermique :
+            <ul>
+                <li>Il sera interdit à la location à partir de 2025</li>
+                <li>Il consomme en moyenne 2 fois plus que le reste des logements français</li>
+            </ul>
+        </div>
+        <div class="datas-two">
+            <div class="data-title">Schéma de déperditions de chaleur -</div>
+            <ul>
+                <li>19% Ventilation</li>
+                <li>19% Ponts thermiques</li>
+                <li>19% Sols</li>
+                <li>19% Toitures ou plafond</li>
+                <li>19% Murs</li>
+                <li>19% Portes et fenêtres</li>
+            </ul>
+        </div>
+    </div>
+    <div class="datas-title">Nous avons concocté 2 scénarios pour améliorer votre DPE</div>
+    <div class="datas-sub">Ces scénarios sont sur-mesure. Grâce à votre DPE, notre logiciel récupère +300 paramètres et relevés techniques de votre bien et conçoit des scénarios de travaux précis, pour votre bien, et pas un autre.</div>
+    <div class="sc-disp">
+
+    </div>
+    </div>
+    </div>
     
     <script type="text/javascript" src="form.js"></script>
-    <script type="text/javascript" src="form2.js"></script>
-    <script type="text/javascript" src="datas.js"></script>
+    <!-- <script type="text/javascript" src="form2.js"></script>
+    <script type="text/javascript" src="data.js"></script> -->
 </body>
 </html>

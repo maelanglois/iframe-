@@ -1,14 +1,14 @@
 const UserForm = class {
   constructor() {
     this.el = document.querySelector('.root');
-    this.el2 = document.querySelector('body');
     this.rend = this.render();
+    this.istrue = true;
     this.run();
   };
 
   onClick(render) {
     const el3 = document.querySelector('.submit');
-    const el2 = document.querySelector('body');
+    const el2 = document.querySelector('.form');
     const el = document.querySelector('.root');
 
     el3.addEventListener('click', (event) => {
@@ -17,8 +17,8 @@ const UserForm = class {
       xhr.open('POST', 'form.js');
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
-          el2.removeChild(el);
-          el2.innerHTML = render;
+          el.removeChild(el2);
+          el.innerHTML = render;
         }
       };
       xhr.send();
@@ -27,8 +27,8 @@ const UserForm = class {
 
   render() {
     return `
-    <div>
-      <form>
+    <div class="form">
+      <form method="post">
         <div>
           <label for="firstname">Prénom</label>
           <input name="firstname" id="firstname" type="text" placeholder="Votre prénom">
@@ -82,7 +82,7 @@ const UserForm = class {
             <label for="vehicle2">Je m'abonne à la newsletter Optimo</label><br>
           </div>
         </div>
-        <input type="submit" value="Obtenir mes scénari de travaux ->">
+        <button type='submit' class="submit2">Obtenir mes scénari de travaux -></button>
       </form> 
     </div>
     <div>
@@ -98,7 +98,8 @@ const UserForm = class {
 
   run() {
     this.onClick(this.rend);
+    console.log('B');
   };
 };
 
-const myForm2 = new UserForm();
+new UserForm();

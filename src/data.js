@@ -1,8 +1,28 @@
 const Two = class {
-    constructor() {
-        this.el = document.querySelector('.root');
-        this.run();
-    };
+  constructor() {
+    this.el = document.querySelector('.root');
+    this.rend = this.render();
+    this.run();
+  };
+
+  onClick(render) {
+    const el3 = document.querySelector('.submit2');
+    const el2 = document.querySelector('.form');
+    const el = document.querySelector('.root');
+
+    el3.addEventListener('click', (event) => {
+      event.preventDefault()
+      var xhr = new XMLHttpRequest(); 
+      xhr.open('POST', 'form2.js');
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          el.removeChild(el2);
+          el.innerHTML = render;
+        }
+      };
+      xhr.send();
+    });
+  }
 
     render() {
         return `
@@ -43,9 +63,10 @@ const Two = class {
         `;
     };
 
-    run() {
-        this.el.innerHTML = this.render();
-    };
+  run() {
+    this.onClick(this.rend);
+    console.log('C');
+  };
 };
 
-const myForm = new Two();
+new Two();
